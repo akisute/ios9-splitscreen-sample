@@ -4,7 +4,7 @@ This sample project demonstrates how to conform the split screen feature (introd
 The simplest scenario to adapt Size Class is to share the same view controller for any size classes (like Regular or Compact),
 but sometimes this approach may be difficult. One such case is when you want to use UICollectionView for Horizontally-Regular sized view
 and UITableView for Horizontally-Compact sized view. In this case you may want to split a view controller for different Size Classes.
-This sample project shows you how to dynamically swap view controllers for different Size Classes dynamically.
+This sample project shows you how to swap view controllers for different Size Classes dynamically.
 
 This project is licensed under the MIT license. This project requires Xcode 7.0 (Swift version 2.0) or later to build.
 
