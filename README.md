@@ -14,6 +14,17 @@ Just simply `git clone` and run.
 
 ## Expository
 
+### How events are fired when Size Class is changed
+
+https://gist.github.com/akisute/291170b50ad87ce95a47
+
+Here's a log when Size Class is changed on several situations. You can see a couple of interesting behavior from this log:
+
+- `willTransitionToTraitCollection` is only fired when actual Size Class is changed. for example, if you rotate iPhone from landscape right to landscape left (causes 180 degree rotation), this method will not be called.
+- `viewWillTransitionToSize` is always fired when the size of the view is updated, even if Size Class itself is actually not changed.
+
+So I think adapting to `willTransitionToTraitCollection` can be useful when you want to update the interface on Size Class update, while `viewWillTransitionToSize` is the best to update your UI dynamically when device is rotating.
+
 ### RootViewController.swift
 
 This is the key view controller to implement multiple view controllers for each different Size Classes. This view controller works as a container view controller,
